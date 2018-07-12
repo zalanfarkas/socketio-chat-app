@@ -20,7 +20,7 @@ socket.on("room-list", (rooms) => {
 
     jQuery("select").on("change", function(){
         if (this.value === "new"){
-            jQuery("#new-room").html(jQuery('<input type="text" name="new-room" autofocus placeholder="Add new room"/>'));
+            jQuery("#new-room").html(jQuery('<input type="text" name="new-room" autofocus placeholder="Enter room name"/>'));
         } else {
             jQuery("#new-room").html("");
         }
