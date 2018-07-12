@@ -18,15 +18,18 @@
                     <label>Display name</label>
                     <input type="text" name="name" autofocus/>
                 </div>
-                <div class="form-field">
+                <div class="form-field" id="room-field">
                     <label>Room name</label>
-                    <input type="text" name="room"/>
                 </div>
+                <div class="form-field" id="new-room"></div>
                 <div class="form-field">
-                    <button>Join</button>
+                    <button id="submit-button">Join</button>
                 </div>
             </form>
         </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/js/index.js"></script>
     </body>
 
 

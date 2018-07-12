@@ -1,3 +1,5 @@
+let unique = (arrArg) => arrArg.filter((elem, pos , arr) => arr.indexOf(elem) == pos);
+
 class Users {
     constructor() {
         this.users = [];
@@ -21,6 +23,15 @@ class Users {
         let users = this.users.filter((user) => user.room === room);
         let namesArray = users.map((user) => user.name);
         return namesArray;
+    }
+
+    isUniqueUserName(name) {
+        return this.users.filter((user) => user.name === name).length === 0;
+    }
+
+    getRoomList() {
+        // return Array.from(new Set(this.users.map((user) => user.room)));
+        return unique(this.users.map((user) => user.room));
     }
 }
 

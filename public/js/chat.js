@@ -18,8 +18,11 @@ function scrollToBottom() {
 
 socket.on("connect", function() {
     var params = jQuery.deparam(window.location.search);
+    if (params["new-room"]) params.room = params["new-room"]; 
 
     console.log("Connected to server");
+    // display chatroom name
+    jQuery("#chatroom-name").text(params.room.toLowerCase());
     socket.emit("join", params, function(err) {
         if (err) {
             alert(err);
