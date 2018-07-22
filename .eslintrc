@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+      "node": true,
+      "browser": true,
+      "es6": true,
+      "mocha": true
+  },
+  "rules": {
+      "no-unused-vars": ["error", {
+          "vars": "local",
+          "args": "none"
+      }],
+      "react/jsx-filename-extension": 0,
+      "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+      "no-unused-expressions": ["error", {"allowTernary": true}]
+    }
+}

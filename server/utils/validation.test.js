@@ -1,18 +1,16 @@
-const expect = require("expect");
-const {isRealString} = require("./validation");
+const expect = require('expect');
+const { isRealString } = require('./validation');
 
-describe("isRealString()", () => {
+describe('isRealString()', () => {
+  it('should reject non-string valus', () => {
+    expect(isRealString(9)).toBe(false);
+  });
 
-    it("should reject non-string valus", () => {
-        expect(isRealString(9)).toBe(false);
-    });
+  it('should reject string with only spaces', () => {
+    expect(isRealString('   ')).toBe(false);
+  });
 
-    it("should reject string with only spaces", () => {
-        expect(isRealString("   ")).toBe(false);
-    });
-
-    it("should allow string with non-space characters", () => {
-        expect(isRealString("    hello    ")).toBe(true);
-    });
-
+  it('should allow string with non-space characters', () => {
+    expect(isRealString('    hello    ')).toBe(true);
+  });
 });

@@ -1,4 +1,4 @@
-const moment = require("moment");
+const moment = require('moment');
 
 
 // let date = new Date();
@@ -10,13 +10,13 @@ const moment = require("moment");
 
 // 10:35 am
 // 6:01 am
-let date = new moment();
-console.log(date.format("h:mm a"));
+const date = moment();
+console.log(date.format('h:mm a'));
 
-let createdAt = 1234;
-let date2 = moment(createdAt);
+const createdAt = 1234;
+const date2 = moment(createdAt);
 console.log(date2.format());
 
-//time passed since unix ...
-let someTimestamp = moment().valueOf();
+// time passed since unix ...
+const someTimestamp = moment().valueOf();
 console.log(someTimestamp);
